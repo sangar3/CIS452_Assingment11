@@ -29,9 +29,9 @@ public class PlayerHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "IceBall")
+        if (col.gameObject.tag == "Enemy")
         {
-            Debug.Log(" player hit by iceball");
+            Debug.Log(" player hit by Enemy");
 
             --Maxhealth;
             playerhealth.text = Maxhealth.ToString();
