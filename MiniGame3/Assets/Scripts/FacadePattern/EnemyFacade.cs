@@ -4,19 +4,48 @@ using UnityEngine;
 
 public class EnemyFacade : MonoBehaviour
 {
-    public EnemyMove enemy;
+
+    public EnemyMove AImove;
+    public EnemyDirection AIdirection;
+
 
     private void Awake()
     {
-        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyMove>();
+        AImove = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyMove>();
 
     }
     void Start()
     {
-       enemy.FindPlayer();
+        AIFindsPlayer();
     }
     void Update()
     {
-        enemy.MoveToPlayer();
+        AIchecksPlayerInstance();
+        AIdirectionController();
+        AIMovesToPlayer();
+
     }
+
+
+    void AIFindsPlayer()
+    {
+        AImove.FindPlayer();
+    }
+
+    void AIMovesToPlayer()
+    {
+        AImove.MoveToPlayer();
+    }
+
+   void AIdirectionController()
+   {
+        AIdirection.EnemyFacesPlayer();
+
+   }
+   void AIchecksPlayerInstance()
+    {
+        AIdirection.CheckPlayerInstance();
+
+    }
+
 }
