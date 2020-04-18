@@ -7,24 +7,32 @@ public class EnemyFacade : MonoBehaviour
 
     public EnemyMove AImove;
     public EnemyDirection AIdirection;
+    
 
 
-    private void Awake()
+    public void Awake()
     {
         AImove = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyMove>();
-
+        AIdirection = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyDirection>();
     }
     void Start()
     {
         AIFindsPlayer();
+       
     }
     void Update()
     {
         AIchecksPlayerInstance();
         AIdirectionController();
         AIMovesToPlayer();
+       
+
 
     }
+
+    
+
+
 
 
     void AIFindsPlayer()
@@ -48,4 +56,5 @@ public class EnemyFacade : MonoBehaviour
 
     }
 
+    
 }

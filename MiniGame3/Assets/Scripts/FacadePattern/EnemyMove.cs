@@ -6,8 +6,11 @@ public class EnemyMove : MonoBehaviour
 {
     public float speed ;
     private Transform target;
+    
 
-
+    
+    
+    
    
 
     public void FindPlayer()
@@ -17,6 +20,9 @@ public class EnemyMove : MonoBehaviour
 
     public void MoveToPlayer()
     {
+        
+
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
+   
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     public GameObject fireball;
-    
+    public AudioClip attackspellSFX;
     public GameObject crosshair;
     Vector3 aim;
     Vector2 shootingDirection;
@@ -42,7 +42,9 @@ public class PlayerShoot : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                
                 GameObject spell = Instantiate(fireball, transform.position, Quaternion.identity);
+                AudioManager.Instance.PlaySFX(attackspellSFX, .3f);
                 spell.GetComponent<Rigidbody2D>().velocity = shootingDirection*spellspeed;
                 spell.transform.Rotate(0.0f,0.0f,Mathf.Atan2(shootingDirection.y,shootingDirection.x) * Mathf.Rad2Deg);
                 Destroy(spell, spellDeathTimer);

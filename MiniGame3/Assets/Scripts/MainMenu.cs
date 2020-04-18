@@ -7,10 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("SpaceShooter");
+        SceneManager.LoadScene("game");
     }
-    public void backmainmenu()
-    {
-        SceneManager.LoadScene("StartTutorial");
-    }
+    
 }
