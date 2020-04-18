@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+     * (Santiago Garcia II)
+     * (EnemyDirection.cs)
+     * (Assignment11)
+     * (has the fuctions/methods for taking damage from the player )
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

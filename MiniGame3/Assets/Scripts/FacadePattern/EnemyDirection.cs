@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+     * (Santiago Garcia II)
+     * (EnemyDirection.cs)
+     * (Assignment11)
+     * (has the fuctions/methods for directing the enemy towards the player )
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
